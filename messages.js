@@ -51,6 +51,9 @@ const getMessages = () => {
                 })
                 console.log(arr);
                 const html = arr.join("")
+
+                //SANITIZING HTML BEFORE SETTING TO PAGE // 
+
                 const htmlClean = DOMPurify.sanitize(html)
                 document.querySelector(".message-board").innerHTML = htmlClean;
 
@@ -61,9 +64,9 @@ const getMessages = () => {
         
 };
 
+// LOADING MESSAGES FROM SERVER
+
 getMessages()
-
-
 
 
 
