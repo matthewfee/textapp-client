@@ -10,8 +10,7 @@ document.querySelector(".user-info").innerHTML = `Posting as ${username}`;
 const createMessage = (obj) => {
     console.log(obj.eventDate)
 
-    // let date = new Date(obj.eventDate)
-    // console.log("DATE OBJECT", date)
+    let date = new Date(obj.eventDate)
     let d = new Date(obj.eventDate);
 
     function formatAMPM(date) {
@@ -43,16 +42,15 @@ const getMessages = () => {
             
     axios.get("https://textapp-server.herokuapp.com/")
         .then((response) => {
-                console.log("Messages Response", response)
+                
                 messagesData = response.data;
-                console.log("MESSAGES DATA", messagesData)
+                
                 let arr = []
                 messagesData.forEach((message) =>  {
                     let newElement = createMessage(message);
-                    console.log("newElement". newElement)
                     arr.push(newElement)
                 })
-                console.log(arr);
+                
                 let html = arr.join("")
                 const htmlClean = DOMPurify.sanitize(html)
                 document.querySelector(".message-board").innerHTML = htmlClean;
@@ -65,9 +63,6 @@ const getMessages = () => {
 };
 
 getMessages()
-
-
-
 
 
 window.addEventListener('load', ()=>{ 
@@ -84,16 +79,18 @@ window.addEventListener('load', ()=>{
         console.log("DATE", date)
         let dataJSON = {eventText: message, 
             eventUser: username,
-            eventDate: date} 
-        console.log("DATA", message)
-        console.log("DATA JSON", dataJSON);
+            eventDate: date} ;
+
+        console.log("DATAJSON", dataJSON)
+        
         axios({ 
           method  : 'post',   
           url : 'https://textapp-server.herokuapp.com/', 
           data : dataJSON, 
         }) 
         .then((res)=>{ 
-          console.log(res); 
+          console.log(res);
+          window.location.reload() 
         }) 
         .catch((err) => {throw err}); 
     }); 

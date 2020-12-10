@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="message-board"></div>
-    <form class="message-form" onsubmit="setTimeout(function(){window.location.reload();},10)">
+    <form class="message-form">
         <div class="user-info">Anonymous</div>
         <input type="text" id="message" name="message" class="message">
         <input type="submit" value="Submit" class="submit-button">
@@ -18,11 +18,9 @@
     
 </body>
 
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.3/purify.min.js"></script>
-
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script src="./messages.js"></script>
 
