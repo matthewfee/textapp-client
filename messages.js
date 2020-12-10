@@ -27,9 +27,9 @@ const createMessage = (messageObj) => {
     return `
     <div class="message-container"> 
         <div class="message--info">
-            <span class="message--user">${obj.eventUser} </span>
+            <span class="message--user">${messageObj.eventUser} </span>
             <span class="message--date">${formattedDate} </span></div>
-        <div class="message--text">${obj.eventText} </div>
+        <div class="message--text">${messageObj.eventText} </div>
     </div>
     `
 }
