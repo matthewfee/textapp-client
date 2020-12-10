@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="message-board"></div>
-    <form class="message-form">
+    <form class="message-form" onsubmit="setTimeout(function(){window.location.reload();}, 1000)">
         <div class="user-info">Anonymous</div>
         <input type="text" id="message" name="message" class="message">
         <input type="submit" value="Submit" class="submit-button">
