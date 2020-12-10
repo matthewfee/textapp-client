@@ -23,7 +23,7 @@ const createMessage = (obj) => {
         var strTime = hours + ':' + minutes + ' ' + ampm;
         return strTime;
       }
-    const formattedDate = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()} ${formatAMPM(d)} `;
+    const formattedDate = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()} ${formatAMPM(d)} `;
     
 
     return `
