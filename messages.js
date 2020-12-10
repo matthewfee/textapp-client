@@ -8,11 +8,8 @@ console.log("MY USERNAME", username)
 document.querySelector(".user-info").innerHTML = `Posting as ${username}`;
 
 const createMessage = (messageObj) => {
-    console.log(messageObj.eventDate)
 
-    // let date = new Date(obj.eventDate)
-    // console.log("DATE OBJECT", date)
-    let d = new Date(obj.eventDate);
+    let d = new Date(messageObj.eventDate);
 
     function formatAMPM(date) {
         var hours = date.getHours();
