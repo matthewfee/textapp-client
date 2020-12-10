@@ -7,8 +7,8 @@ console.log("MY USERNAME", username)
 
 document.querySelector(".user-info").innerHTML = `Posting as ${username}`;
 
-const createMessage = (obj) => {
-    console.log(obj.eventDate)
+const createMessage = (messageObj) => {
+    console.log(messageObj.eventDate)
 
     // let date = new Date(obj.eventDate)
     // console.log("DATE OBJECT", date)
@@ -53,7 +53,7 @@ const getMessages = () => {
                     arr.push(newElement)
                 })
                 console.log(arr);
-                let html = arr.join("")
+                const html = arr.join("")
                 const htmlClean = DOMPurify.sanitize(html)
                 document.querySelector(".message-board").innerHTML = htmlClean;
 
@@ -78,15 +78,12 @@ window.addEventListener('load', ()=>{
         e.preventDefault(); 
         //creates a multipart/form-data object 
         let message = document.querySelector('.message').value;
-        console.log("username", username)
         let date = new Date();
         
         console.log("DATE", date)
         let dataJSON = {eventText: message, 
             eventUser: username,
             eventDate: date} 
-        console.log("DATA", message)
-        console.log("DATA JSON", dataJSON);
         axios({ 
           method  : 'post',   
           url : 'https://textapp-server.herokuapp.com/', 
