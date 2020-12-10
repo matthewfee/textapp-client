@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
+</head>
+<body>
+    <div class="message-board"></div>
+    <form class="message-form" onsubmit="setTimeout(function(){window.location.reload();},10)">
+        <div class="user-info">Anonymous</div>
+        <input type="text" id="message" name="message" class="message">
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+    
+</body>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.3/purify.min.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="./messages.js"></script>
+
+
+
+</html>

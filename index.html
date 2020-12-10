@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
 </head>
 <body>
     
-  
+    <wrapper class="wrapper">
 
-    <form>
-        <label for="userName">Username?</label>
-        <input type="text" id="userName" name="userName">
-
-        <button>Submit</button>
-
+    <form action="./messages.html" class="username-form">
+        <label for="username" class="username-label">Username?</label>
+        <input type="text" id="username" name="username" class="username">
+        <input type="submit" value="Submit" class="submit-button">
     </form>
+
+    </wrapper>  
 
     
 </body>
 
-<script src="./index.js"></script> 
+<script src="./src.js"></script>
+
 </html>

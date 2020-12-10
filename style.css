@@ -1,0 +1,114 @@
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #222329;
+    font-family: PT Sans;
+}
+
+h1 {
+    background-color: blue;;
+}
+
+.message-board, .message-container, .message-form {
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.message-board {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.message-container {
+    background-color: #333539;
+    width: 100%;
+    color: #EBEBEB;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.message--info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 300px;
+    padding: 5px;
+}
+
+.message--user {
+    text-transform: uppercase;
+    color: #ebebebcc;
+    padding: 5px;
+}
+
+.message--date {
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #ebebebc4;
+}
+
+.message--text {
+    padding: 10px;
+}
+
+.message-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.message, .username {
+    width: 300px;
+    min-height: 40px;
+}
+
+.user-info {
+    color:  #ebebebc4;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+}
+
+.submit-button {
+    width: 30%;
+    background-color: #222329;
+    height: 40px;
+    color: #EBEBEB;
+    text-transform: uppercase;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: auto;
+}
+
+.username-form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 300px;
+
+}
+
+.username-label {
+    color: #EBEBEB;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;   
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 600px;
+}
+
+
+
+
