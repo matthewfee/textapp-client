@@ -1,11 +1,15 @@
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     background-color: #222329;
     font-family: PT Sans;
-    scroll-behavior: smooth;
+
 }
 
 h1 {
