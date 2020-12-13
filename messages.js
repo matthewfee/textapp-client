@@ -36,12 +36,18 @@ const createMessage = (obj) => {
     `
 }
 
+
+
 const getMessages = () => {
+
+    
 
     axios.defaults.headers.common['Content-Type'] = 'application/json'; 
             
     axios.get("https://textapp-server.herokuapp.com/")
         .then((response) => {
+
+            console.log("GET REQUEST LOG")
                 
                 let messagesData = response.data;
                 
@@ -62,8 +68,7 @@ const getMessages = () => {
         
 };
 
-getMessages()
-
+getMessages();
 
 window.addEventListener('load', ()=>{ 
         
