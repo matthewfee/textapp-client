@@ -5,6 +5,7 @@ body {
     align-items: center;
     background-color: #222329;
     font-family: PT Sans;
+    scroll-behavior: smooth;
 }
 
 h1 {

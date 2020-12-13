@@ -43,7 +43,7 @@ const getMessages = () => {
     axios.get("https://textapp-server.herokuapp.com/")
         .then((response) => {
                 
-                messagesData = response.data;
+                let messagesData = response.data;
                 
                 let arr = []
                 messagesData.forEach((message) =>  {
@@ -71,7 +71,7 @@ window.addEventListener('load', ()=>{
     form.addEventListener('submit', (e)=>{ 
         // to prevent reload 
         e.preventDefault(); 
-        //creates a multipart/form-data object 
+
         let message = document.querySelector('.message').value;
         console.log("username", username)
         let date = new Date();
@@ -90,7 +90,7 @@ window.addEventListener('load', ()=>{
         }) 
         .then((res)=>{ 
           console.log(res);
-          window.location.reload() 
+          getMessages();
         }) 
         .catch((err) => {throw err}); 
     }); 
